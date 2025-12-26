@@ -259,3 +259,21 @@ SELECT
   SUM(likes) OVER (ORDER BY views desc) AS cumulative_likes
 FROM spotify
 ORDER BY views desc;
+------------------------------------------------------------------------------------------------------
+
+-- Query Optimisation 
+
+explain analyze   --Execution Time: 27.296 ms & Planning Time: 3.454 ms
+-- without index_artist, it is doing sequence scan. i.e. it is searching from top to bottom all rows
+SELECT
+artist,
+track,
+views
+FROM spotify
+WHERE artist = 'Gorillaz'
+AND
+most_played_on = 'Youtube'
+ORDER BY stream DESC LIMIT 25;  
+-- after creating index, it has directly grouped up the artists and it will directly jump to the selected artist 
+create index artist_index on spotify(artist)
+-- after indexing; Execution Time: 0.69 ms & Planning Time: 0.142 ms
