@@ -1,5 +1,7 @@
 # Spotify Advanced SQL Project and Query Optimization
 
+![Spotify_Data_Analysis Dashboard](spotify_logo.jpg)
+
 **Project Category:** Advanced  
 **Dataset:** Spotify Track & Streaming Dataset (Kaggle)
 
