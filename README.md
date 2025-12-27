@@ -2,6 +2,11 @@
 
 ![Spotify_Data_Analysis Dashboard](spotify_logo.jpg)
 
+## Dataset Source
+The dataset used in this project is publicly available on Kaggle:
+
+🔗 **Spotify Dataset**:  
+https://www.kaggle.com/datasets/sanjanchaudhari/spotify-dataset
 **Project Category:** Advanced  
 **Dataset:** Spotify Track & Streaming Dataset (Kaggle)
 
