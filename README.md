@@ -5,8 +5,9 @@
 ## Dataset Source
 The dataset used in this project is publicly available on Kaggle:
 
-🔗 **Spotify Dataset**:  
+🔗 **Spotify Dataset on Kaggle**  
 https://www.kaggle.com/datasets/sanjanchaudhari/spotify-dataset
+
 **Project Category:** Advanced  
 **Dataset:** Spotify Track & Streaming Dataset (Kaggle)
 
