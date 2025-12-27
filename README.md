@@ -87,7 +87,9 @@ To enhance query performance, we followed a structured query optimization approa
   - **Execution Time (E.T.)**: 7 ms  
   - **Planning Time (P.T.)**: 0.17 ms
 - Below is the screenshot of the execution plan **before index creation**:
-  - *EXPLAIN Before Index*
+  - ![EXPLAIN Before Index](Before_Indexing.png)
+*Execution plan before index creation showing higher execution and planning time*
+
 
 ---
 
