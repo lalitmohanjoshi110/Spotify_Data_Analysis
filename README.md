@@ -77,22 +77,25 @@ Once the data was loaded, a wide range of SQL queries were written and categoriz
 
 ---
 
-## Query Optimization
-To improve query efficiency, performance tuning techniques were applied on frequently queried columns.
+## Query Optimization Technique
 
-- **Initial Performance Analysis**  
-  Query execution was first analyzed using `EXPLAIN ANALYZE`, which revealed higher execution and planning times when filtering on non-indexed columns.
+To enhance query performance, we followed a structured query optimization approach using PostgreSQL’s execution analysis tools.
 
-- **Index Creation**  
-  An index was created on the `artist` column to speed up lookups and reduce scan time:
+### Initial Query Performance Analysis using `EXPLAIN`
+- The performance of a query filtering data based on the `artist` column was first analyzed using the `EXPLAIN` command.
+- Observed performance metrics before optimization:
+  - **Execution Time (E.T.)**: 7 ms  
+  - **Planning Time (P.T.)**: 0.17 ms
+- Below is the screenshot of the execution plan **before index creation**:
+  - *EXPLAIN Before Index*
+
+---
+
+### Index Creation on the `artist` Column
+- To optimize query performance, an index was created on the `artist` column to speed up lookup operations.
+- SQL command used:
   ```sql
   CREATE INDEX idx_artist ON spotify(artist);
-  ```
-
-- **Post-Optimization Results**  
-  After indexing, the same query showed a significant reduction in execution time, demonstrating how indexing can drastically improve query performance on large datasets.
-
-This section highlights the importance of understanding execution plans and applying indexing strategically in analytical SQL projects.
 
 ---
 
